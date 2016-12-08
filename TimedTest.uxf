@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>0</y>
+      <w>320</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>attendence.controller :: AttendenceController
+--
+- display : AttendenceViewer
+- stupidBot : Chatbot
+--
++ start() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>10</y>
+      <w>300</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>attendence.controller :: attendenceRunner
+--
+
+--
++ main(String[]) : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>280</y>
+      <w>300</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>attendence.model :: ChatBot
+--
+- List&lt;String&gt; politicalTopicList : Chatbot
+--
+
++ Chatbot() : constructor
++ buildNamesList() : void
++ getNamesList() : void
++ setNamesList() : void
++ getContent() : void
++ setContent() : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>150</y>
+      <w>300</w>
+      <h>260</h>
+    </coordinates>
+    <panel_attributes>attendence.view :: AttendenceViewer
+--
+--
++ displayMessage(String) : void
++ collectResponse(String) : String</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
