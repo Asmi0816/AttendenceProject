@@ -27,10 +27,10 @@ public class AttendencePanel extends JPanel
 		baseLayout = new SpringLayout();
 		chatDisplay = new JTextArea(5, 25);
 		chatField = new JTextField(25);
-		chatButton = new JButton("This one has words");
-		chatLabel = new JLabel("This also has words");
+		chatButton = new JButton("Add name to list");
+		chatLabel = new JLabel("This is the class");
 	
-		
+	
 		setupPanel();
 		setupLayout();
 		setupListeners();
@@ -42,11 +42,18 @@ public class AttendencePanel extends JPanel
 	{
 		this.setLayout(baseLayout);
 		this.add(chatLabel);
+		this.add(chatButton);
+		this.add(chatField);
 	}
 	
 	private void setupLayout()
 	{
-		
+		baseLayout.putConstraint(SpringLayout.EAST, chatField, -10, SpringLayout.EAST, this);
+		baseLayout.putConstraint(SpringLayout.SOUTH, chatField, -6, SpringLayout.NORTH, chatButton);
+		baseLayout.putConstraint(SpringLayout.SOUTH, chatButton, -45, SpringLayout.SOUTH, this);
+		baseLayout.putConstraint(SpringLayout.EAST, chatButton, -28, SpringLayout.EAST, this);
+		baseLayout.putConstraint(SpringLayout.WEST, chatLabel, 10, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.SOUTH, chatLabel, -237, SpringLayout.SOUTH, this);
 	}
 	
 	private void setupListeners()
