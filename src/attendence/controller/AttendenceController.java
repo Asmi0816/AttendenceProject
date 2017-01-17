@@ -32,6 +32,7 @@ public class AttendenceController
 	public void start()
 	{
 		JOptionPane.showMessageDialog(baseFrame, "Welcome to Class!");
+		
 	}
 	
 	public void buildnames()
